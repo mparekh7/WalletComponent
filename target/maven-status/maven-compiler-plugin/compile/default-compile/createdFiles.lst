@@ -1,0 +1,12 @@
+com\demo\app\service\ProductServiceImpl.class
+com\demo\app\dao\ProductDaoImpl.class
+com\demo\app\config\HibernateConfiguration.class
+com\demo\app\dao\AbstractDao.class
+com\demo\app\controller\ProductController.class
+com\demo\app\spring\WebConfig.class
+com\demo\app\view\ProductViewObject.class
+com\demo\app\dao\ProductDao.class
+com\demo\app\config\AppInitializer.class
+com\demo\app\spring\AppConfig.class
+com\demo\app\service\ProductService.class
+com\demo\app\model\Product.class

@@ -1,0 +1,39 @@
+<div class="row" ng-controller="cartCtrl as cart" style="padding: 20px;">
+	<div class="col-md-12 col-xs-12 col-sm-12">
+		<div>
+			<div class="col-md-12 col-xs-12 col-sm-12" align="center"></div>
+		</div>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 20px">
+		<form novalidate name="form">
+			<div class="row" align="center">
+				<div class="col-md-12">
+					<label>Cart</label> <br /> <br />
+					<form name="form" novalidate>
+						<table class="table table-bordered" align="center">
+							<th class="header">Item Code</th>
+							<th class="header">Item Name</th>
+							<th class="header">Item Price</th>
+							<th class="header">Qty</th>
+							<th class="header">Total Price</th>
+							<th></th>
+							<tbody>
+								<tr ng-repeat="item in cart.items">
+									<td>{{item.code}}</td>
+									<td>{{item.name}}</td>
+									<td>{{item.price}}</td>
+									<td>{{item.qty}}</td>
+									<td>{{item.qty?(item.qty*item.price):'0'}}</td>
+									<td>
+										<button ng-click="cart.removeProduct(item,$index)">Remove</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>

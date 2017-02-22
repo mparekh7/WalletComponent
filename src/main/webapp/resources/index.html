@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+<title>Demo</title>
+<link rel="stylesheet" href="resources/style/bootstrap.css" />
+<link rel="stylesheet" href="resources/style/my.css" />
+</head>
+
+<body>
+	<div class="content">
+		<div class="col-xs-12" align="center">
+			<label>e-Commerce Test Site</label>
+		</div>
+		<div class="col-xs-12">
+			<div class="pull-right">
+				<a href="#/cart" ng-if="currentPage!='/cart'">View cart</a>
+				<a
+					href="#/product" ng-if="currentPage!='/product'">View products</a>
+			</div>
+		</div>
+		<div class="row">
+			<div ui-view=""></div>
+		</div>
+	</div>
+	<script src="resources/scripts/jquery.js"></script>
+	<script src="resources/scripts/jquery-ui.js"></script>
+	<script src="resources/scripts/angular.js"></script>
+	<script src="resources/scripts/angular-ui-router.js"></script>
+	<script src="resources/scripts/ui-bootstrap.js"></script>
+	<script src="resources/app.module.js"></script>
+	<script src="resources/product/product.controller.js"></script>
+	<script src="resources/product/product.service.js"></script>
+	<script src="resources/cart/cart.controller.js"></script>
+	<script src="resources/cart/cart.service.js"></script>
+	<script src="resources/directives/numbersonly.directive.js"></script>
+</body>
+
+</html>

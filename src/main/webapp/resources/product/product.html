@@ -1,0 +1,41 @@
+<div class="row" ng-controller="productCtrl as product"
+	style="padding: 20px;">
+	<div class="col-md-12 col-xs-12 col-sm-12" align="center">
+		<label>List of Products</label>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 20px">
+		<form novalidate name="form">
+			<div class="row" align="center">
+				<div class="col-md-12">
+					<form name="form" novalidate>
+						<table class="table table-bordered" align="center">
+							<th class="header">Item Code</th>
+							<th class="header">Item Name</th>
+							<th class="header">Item Price</th>
+							<th class="header">Qty</th>
+							<!--  <th class="header">Total Price</th>-->
+							<th></th>
+							<tbody>
+								<tr ng-repeat="item in product.products">
+									<td>{{item.code}}</td>
+									<td>{{item.name}}</td>
+									<td>{{item.price}}</td>
+									<td><input class="form-control col-md-1"
+										ng-model="item.qty" numbers-only /></td>
+									<td>
+										<button ng-click="product.addToCart(item)" ng-if="!item.added">Add
+											to cart</button> <a href="#/cart" ng-if="item.added"><button>Go
+												to cart</button></a>
+										<button ng-click="product.addToCart(item)" ng-if="item.added">Update
+											cart</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
